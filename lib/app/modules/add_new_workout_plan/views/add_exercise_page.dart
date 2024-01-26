@@ -31,7 +31,7 @@ class _AddExerciseState extends State<AddExercise> {
     var size = MediaQuery.of(context).size;
 
     return Scaffold(
-        backgroundColor: AppColors.darkBlue,
+        backgroundColor: AppColors.Blue7,
         appBar: _appBar(context),
         body: Column(
           children: [
@@ -67,13 +67,13 @@ class _AddExerciseState extends State<AddExercise> {
             },
             child: Text(
               'Next',
-              style: TextStyle(fontSize: 18),
+              style: TextStyle(fontSize: 18,color: Colors.white,),
             ),
           ),
         ),
       ],
       leading: IconButton(
-        icon: Icon(Icons.arrow_back_ios),
+        icon: Icon(Icons.arrow_back_ios, color: Colors.white,),
         onPressed: () {
           Navigator.pop(context);
         },
@@ -112,8 +112,8 @@ class _AddExerciseState extends State<AddExercise> {
               color: Colors.white,
             ),
             color: AppColors.darkBlue,
-            widthSize: size.width * .95,
-            heightSize: size.height * .06,
+            widthSize: size.width * .85,
+            heightSize: size.height * .05,
             hintText: 'Search',
             onChanged: (String text) {
               _exercoseController.searchExercises(text);

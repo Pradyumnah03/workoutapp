@@ -45,7 +45,7 @@ class HomeView extends StatelessWidget {
           margin: EdgeInsets.only(top: 10),
           decoration: BoxDecoration(
               color: Colors.transparent,
-              border: Border.all(color: Colors.grey[300]!, width: 1)),
+              border: Border.all(color: Colors.black, width: 1)),
           child: Obx(
             () => Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -73,8 +73,8 @@ class HomeView extends StatelessWidget {
         height: size.height * .14,
         width: size.width,
         decoration: BoxDecoration(
-            color: Colors.transparent,
-            border: Border.all(color: Colors.grey[300]!, width: 1)),
+            color: Colors.blue,
+            border: Border.all(color: Colors.black, width: 1)),
         child: Row(
           children: [
             Container(
@@ -105,12 +105,16 @@ class HomeView extends StatelessWidget {
                 children: [
                   Text(
                     "Previous Workout",
-                    style: subTitleStyleGrey,
-                  ),
+                style: TextStyle(
+                  fontSize: 18,  // Adjust font size as needed
+                  color: Colors.black,
+                )),
                   Text(
                     "${AllPlans().nameEncoder(_statsController.lastWorkout.value.id!).toUpperCase()}",
-                    style: titleStyle,
-                  ),
+                    style: TextStyle(
+                      fontSize: 16,  // Adjust font size as needed
+                      color: Colors.black,
+                  )),
                   Text(
                     "${_statsController.lastWorkout.value.exercisesRepetations} times completed",
                     style: smalSubTitleStyle,
@@ -121,7 +125,7 @@ class HomeView extends StatelessWidget {
             Spacer(),
             Icon(
               Icons.arrow_forward_ios_rounded,
-              color: Colors.grey,
+              color: Colors.black,
               size: 20,
             ),
             SizedBox(
@@ -148,7 +152,7 @@ class HomeView extends StatelessWidget {
           ),
           Text(
             subtitle,
-            style: smallTitleStyleGrey,
+            style: smallTitleStyleBlue,
           ),
         ],
       ),
@@ -172,7 +176,7 @@ class HomeView extends StatelessWidget {
                 Text(
                   'You have no workouts yet. Go on and create\nyour first one!',
                   textAlign: TextAlign.center,
-                  style: subTitleStyleGrey,
+                  style: smallTitleStyleBlue,
                 ),
                 SizedBox(
                   height: 25,
@@ -198,7 +202,7 @@ class HomeView extends StatelessWidget {
                     children: [
                       Text(
                         'MY WORKOUTS',
-                        style: subTitleStyleGrey,
+                        style: smallTitleStyleBlue,
                       ),
                       GestureDetector(
                         onTap: () => Get.to(() => ShowAll()),
