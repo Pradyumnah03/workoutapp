@@ -6,14 +6,20 @@ import 'package:builderworkoutplanner/app/data/local/preference/prefs.dart';
 import 'package:builderworkoutplanner/app/modules/introduction/controllers/intro_controller.dart';
 import 'package:builderworkoutplanner/app/modules/introduction/views/intro_view.dart';
 import 'package:builderworkoutplanner/app/my_app.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-void main() async {
+Future main() async {
   WidgetsFlutterBinding.ensureInitialized();
   // <-- Adding this line to initialize my app first
+  if(kIsWeb){
+    await Firebase.initializeApp(options: FirebaseOptions(apiKey: "AIzaSyBAvU1AaWg-HSssz4xbvFTO__n0q7fe_G4", appId: "1:214817183855:web:3f44131e88983f2a38559a", messagingSenderId: "214817183855", projectId: "workoutapp-3fba5"));
+  }
+  await Firebase.initializeApp();
   SharedPreferences.getInstance().then((SharedPreferences sp) {
     Prefs.setPrefs(sp);
     runApp(MyApp());

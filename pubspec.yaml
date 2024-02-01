@@ -33,6 +33,10 @@ dependencies:
   flare_flutter: null
   flutter:
     sdk: flutter
+  firebase_core: ^2.24.2
+  firebase_auth: ^4.16.0
+  firebase_storage: ^11.6.0
+  cloud_firestore: ^4.14.0
   flutter_countdown_timer: null
   get: null
   google_fonts: ^6.1.0

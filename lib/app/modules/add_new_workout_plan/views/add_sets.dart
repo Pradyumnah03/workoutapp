@@ -85,13 +85,13 @@ class AddSets extends StatelessWidget {
             },
             child: Text(
               'Next',
-              style: TextStyle(fontSize: 18),
+              style: TextStyle(fontSize: 18, color: Colors.white),
             ),
           ),
         ),
       ],
       leading: IconButton(
-        icon: Icon(Icons.arrow_back_ios),
+        icon: Icon(Icons.arrow_back_ios, color: Colors.white,),
         onPressed: () {
           _exerciseController.getExercises();
           Get.back();
@@ -109,7 +109,7 @@ class AddSets extends StatelessWidget {
         Column(
           children: [
             Container(
-              height: size.height * .19,
+              height: size.height * .20,
               width: size.width,
               margin: EdgeInsets.only(top: size.height * .02, left: 20),
               child: Column(

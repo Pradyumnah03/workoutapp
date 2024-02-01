@@ -21,7 +21,7 @@ class HomeView extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-          centerTitle: false,
+          centerTitle: true,
           elevation: 0,
           leadingWidth: 0,
           backgroundColor: Colors.transparent,
@@ -32,12 +32,15 @@ class HomeView extends StatelessWidget {
           actions: [
             Container(
                 margin: EdgeInsets.only(right: size.width * .05),
-                child: Icon(
-                  Icons.person_outline_outlined,
-                  color: Colors.black,
-                  size: size.width * .08,
-                )),
-          ]),
+                ),
+          ],
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back_ios, color: Colors.transparent,),
+          onPressed: () {
+
+          },
+        ),
+      ),
       body: Column(children: [
         Container(
           height: size.height * .14,
@@ -45,7 +48,7 @@ class HomeView extends StatelessWidget {
           margin: EdgeInsets.only(top: 10),
           decoration: BoxDecoration(
               color: Colors.transparent,
-              border: Border.all(color: Colors.black, width: 1)),
+              border: Border.all(color: Colors.black, width: 2)),
           child: Obx(
             () => Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -123,6 +126,7 @@ class HomeView extends StatelessWidget {
               ),
             ),
             Spacer(),
+
             Icon(
               Icons.arrow_forward_ios_rounded,
               color: Colors.black,

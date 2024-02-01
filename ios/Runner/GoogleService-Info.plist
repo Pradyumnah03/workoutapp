@@ -3,17 +3,17 @@
 <plist version="1.0">
 <dict>
 	<key>API_KEY</key>
-	<string>AIzaSyB7QDzj-hidUAlLBfWDZ9BrCusazJ7p7Ow</string>
+	<string>AIzaSyAnpxnJ-T3nP10aC_98a0l0RQEZkT_BAic</string>
 	<key>GCM_SENDER_ID</key>
-	<string>439095484537</string>
+	<string>214817183855</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>com.aed.builderworkoutplanner</string>
 	<key>PROJECT_ID</key>
-	<string>workoutapp-dcd09</string>
+	<string>workoutapp-3fba5</string>
 	<key>STORAGE_BUCKET</key>
-	<string>workoutapp-dcd09.appspot.com</string>
+	<string>workoutapp-3fba5.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -25,6 +25,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:439095484537:ios:0fc13e42aabf0daa9374a8</string>
+	<string>1:214817183855:ios:682e89e7beaaaa9138559a</string>
 </dict>
 </plist>
